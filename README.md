@@ -34,7 +34,7 @@ www   三级域名
 查看当前计算机开的端口 ：netstat -an  
   
 ## Linux配置IP地址的方法  
-+ifconfig命令临时配置  
++ ifconfig命令临时配置  
 >查看与配置网络状态命令  
   
 >临时设置eth0网卡的IP地址  ifconfig eth0：0 192.168.3.251  
@@ -50,7 +50,7 @@ www   三级域名
 + 图形界面配置IP地址  
   
 ## Linux网络配置文件  
-+ vim /etc/sysconfig/network-scripts/ifcfg-eth0  
+#### vim /etc/sysconfig/network-scripts/ifcfg-eth0  
   
 >DEVICE=eth0   网卡设备名  
 >BOOTPROTO=none 是否自动获取IP（none，static，dhcp）  
@@ -90,7 +90,7 @@ search localhost
 >ifup 网卡设备名  启用该网卡设备  
   
 ### 查询网络状态  
-netstat[选项]  
+##### netstat[选项]  
 netstat -tlun 查看监听  查看本机连接的服务  
 netstat -an  所有  
 netstat -an  | grep ESTABLISHED  连接的网络服务  
