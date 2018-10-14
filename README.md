@@ -28,22 +28,22 @@ www   三级域名
   
 #### TCP/IP协议  
   应用层>              传输层>国际互联层>  网络接口层  
-国际互联层：解决主机到主机的通信问题，有三层协议：IP、互联网组管理协议（IGMP）、报文协议（ICMP）  
-TCP可靠性高  
-UDP 快速、不可靠  
+>国际互联层：解决主机到主机的通信问题，有三层协议：IP、互联网组管理协议（IGMP）、报文协议（ICMP）  
+>TCP可靠性高  
+>UDP 快速、不可靠  
 查看当前计算机开的端口 ：netstat -an  
   
 ## Linux配置IP地址的方法  
-+ ifconfig命令临时配置  
-查看与配置网络状态命令  
++ifconfig命令临时配置  
+>查看与配置网络状态命令  
   
-临时设置eth0网卡的IP地址  ifconfig eth0：0 192.168.3.251  
-取消设置 ifconfig eth0：down  
+>临时设置eth0网卡的IP地址  ifconfig eth0：0 192.168.3.251  
+>取消设置 ifconfig eth0：down  
   
 + setup工具永久配置  
-红帽专有图形化工具  
-网络配置》设置配置  
-service network restart  
+>红帽专有图形化工具  
+>网络配置》设置配置  
+  service network restart  
   
   
 + 修改网络配置文件  
@@ -67,7 +67,7 @@ service network restart
 >UESRCTL=no 不允许非root用户控制  
   
 ## 主机名文件  
-+ vi /etc/sysconfig/network  
+#### vi /etc/sysconfig/network  
   
 1、查看和修改主机名 永久生效  
 NETWORKING=yes  网络服务是否运行  
@@ -77,7 +77,7 @@ HOSTNAME=localhost.localdomain  主机名
   
   
 ## DNS配置文件  
-1、vi /etc/resolv.conf  
+#### vi /etc/resolv.conf  
 nameserver 202.106.0.20  
 search localhost  
   
@@ -103,6 +103,5 @@ netstat -rn  查看路由表
 route -n 查看路由列表（可以看到网关）  
   
 ### 域名解析命令  
-nslookup 主机名或IP   进行域名与IP地址解析  
-nslookup  
-  >server   查看本机DNS服务器
+>nslookup 主机名或IP   进行域名与IP地址解析  
+>nslookup  >server   查看本机DNS服务器
